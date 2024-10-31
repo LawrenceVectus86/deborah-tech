@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.header-img {
+  animation: bounce 4s linear infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@layer base {
+  .form-control {
+    @apply border border-formBorder py-[7.5px] px-3 rounded-lg focus:border-primary placeholder:text-placeholder placeholder:text-lg;
+  }
+
+  .btn-outline {
+    @apply border border-black text-black rounded-full text-xl font-medium leading-[33px] py-3 px-4;
+  }
+
+  .btn-outline-link {
+    @apply bg-white border-2 lg:border border-black text-black font-semibold text-xs lg:text-lg py-[7px] lg:py-[10px] px-5 lg:px-[32px] rounded-full hover:border-primary hover:text-primary;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white rounded-full text-xl font-medium leading-[33px] py-3 px-4;
+  }
+
+  .btn-primary-link {
+    @apply bg-primary text-white cursor-pointer py-[11px] lg:py-[15px] px-[49px] lg:px-[54px] text-xs lg:text-lg rounded-full font-bold;
+  }
+
+  .btn-icon {
+    @apply p-3 bg-primary text-white rounded-full text-center hover:bg-primarySurface;
+  }
+
+  .nav-link {
+    @apply text-inActive cursor-pointer font-medium pe-[20px] xl:pe-[45px]  text-base hover:text-primary tracking-tight;
+  }
+
+  .footer-link {
+    @apply cursor-pointer text-lg font-medium text-black hover:text-primary;
+  }
+}
+
+a.active {
+  color: #233b6e;
+}

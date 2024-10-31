@@ -30,11 +30,6 @@ export const navbarData = [
     link: "about-us",
   },
   {
-    id: 3,
-    name: "Team",
-    link: "team",
-  },
-  {
     id: 4,
     name: "Service",
     link: "service",
